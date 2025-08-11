@@ -34,6 +34,7 @@ public class ControllerTest {
         Select continentSelector = new Select(driver.findElement(By.id("continents")));
         // continentSelector.selectByValue("europe");
         continentSelector.selectByIndex(1);
+        Uninterruptibles.sleepUninterruptibly(2,TimeUnit.SECONDS);
         driver.findElement(By.id("submit")).submit();
         String titleUrl = driver.getCurrentUrl();
         System.out.println("Title Url: "+titleUrl);
